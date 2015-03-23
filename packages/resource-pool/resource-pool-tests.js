@@ -24,3 +24,11 @@ Tinytest.add('resource numbering - 2/3 players', function (test) {
     test.equal(pool[gold], config.resourceLimit[gold]);
   }
 });
+
+Tinytest.add('resource assignment - single', function(test) {
+  var pool = ResourcePool(config, 2);
+  test.equal(Object.keys(pool.assigned).length, 0);
+  pool.assign("player1", red);
+  test.equal(Object.keys(pool.assigned).length, 1);
+  test.equal(pool[red], 3);
+});
