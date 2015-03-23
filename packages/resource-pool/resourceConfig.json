@@ -1,0 +1,6 @@
+{
+  "resourceLimit" : {
+      "2" : 4
+  },
+  "resources" : ["green","blue","red","black","white"]
+}
