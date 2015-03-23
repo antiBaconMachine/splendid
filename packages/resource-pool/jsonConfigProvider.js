@@ -1,3 +1,3 @@
-getConfig = function() {
-    return JSON.parse(Assets.getText('resourceConfig.json'));
+getConfig = function(cb) {
+    Meteor.call('resourceConfig',cb);
 };

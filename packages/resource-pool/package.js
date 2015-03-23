@@ -14,8 +14,9 @@ Package.onUse(function(api) {
     api.versionsFrom('1.0.3.1');
     api.use('underscore');
     api.addFiles('resourceConfig.json', 'server', {isAsset : true});
-    api.addFiles(['jsonConfigProvider.js', 'resourcePoolFactory.js'], 'server');
-    api.addFiles('resource-pool.js', 'client');
+    api.addFiles(['server.js'], 'server');
+    api.addFiles(['ResourcePool.js'], ['client','server']);
+    api.addFiles(['jsonConfigProvider.js'], 'client');
     api.export('ResourcePool');
 });
 
