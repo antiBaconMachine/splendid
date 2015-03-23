@@ -1,5 +1,6 @@
 var red = "red",
-    green = "green";
+    green = "green",
+    gold = "gold";
 
 var limit2 = 4,
     limit3 = 5;
@@ -7,9 +8,11 @@ var limit2 = 4,
 var config = {
   "resourceLimit" : {
     "2" : limit2,
-    "3" : limit3
+    "3" : limit3,
+    "gold" : 5
 },
-  "resources" : [red,green]
+  "concreteResources" : [red,green],
+  "wildResources" : [gold]
 }
 
 
@@ -18,5 +21,6 @@ Tinytest.add('resource numbering - 2/3 players', function (test) {
     var pool = ResourcePool(config, i);
     test.equal(pool[red], config.resourceLimit["" + i]);
     test.equal(pool[green], config.resourceLimit["" + i]);
+    test.equal(pool[gold], config.resourceLimit[gold]);
   }
 });

@@ -24,4 +24,5 @@ Package.onTest(function(api) {
   api.use('tinytest');
   api.use('resource-pool');
   api.addFiles('resource-pool-tests.js');
+    api.export('ResourcePool');
 });

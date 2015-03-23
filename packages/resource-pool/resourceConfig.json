@@ -1,6 +1,8 @@
 {
   "resourceLimit" : {
-      "2" : 4
+      "2" : 4,
+      "gold" : 6
   },
-  "resources" : ["green","blue","red","black","white"]
+  "concreteResources" : ["green","blue","red","black","white"],
+  "wildResources" : ["gold"]
 }
